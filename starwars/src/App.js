@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
-// import StarWarsCard from './components/StarWarsCard';
 import StarWarsList from './components/StarWarsList';
+import NavBar from "./components/NavBar"
+
+
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -12,6 +15,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <NavBar />
       <h1 className="Header">React Wars</h1>
       <StarWarsList />
     </div>
