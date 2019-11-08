@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import styled from "styled-components";
 
 import {
@@ -6,7 +6,7 @@ import {
     CardTitle, Col
   } from 'reactstrap';
 
-
+  import { Button, Fade } from 'reactstrap';
 
   const CardStyle = styled.div `   
         color: purple;  
@@ -39,8 +39,8 @@ import {
 `;
 
 const StarWarsCard = props => {
-
-
+    const [fadeIn, setFadeIn] = useState(true);
+    const toggle = () => setFadeIn(!fadeIn);
 
     return (
       
@@ -49,11 +49,14 @@ const StarWarsCard = props => {
           <Card>
           <CardStyle div key={props.id}>
             <CardBody>
-              <CardTitleSize>Character: {props.name}</CardTitleSize>
+            <Button color="primary" onClick={toggle}>{props.name}</Button>
+            <Fade in={fadeIn} tag="h5" className="mt-3">
+              <CardTitleSize>Character Data</CardTitleSize>
               <CardText>Height: {props.height}</CardText>
               <CardTitle>Mass: {props.mass}</CardTitle>
               <CardTitle>Hair Color: {props.hair_color}</CardTitle>
               <CardTitle>Skin Color: {props.skin_color}</CardTitle>
+              </Fade>
             </CardBody>
           </CardStyle>
           </Card>
