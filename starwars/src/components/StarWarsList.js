@@ -27,7 +27,8 @@ function StarWarsList() {
                         height={starwars.height}
                         mass={starwars.mass}
                         hair_color={starwars.hair_color} 
-                        skin_color={starwars.skin_color} 
+                        skin_color={starwars.skin_color}
+                        eye_color={starwars.eye_color}  
                     />
                 )
             })}

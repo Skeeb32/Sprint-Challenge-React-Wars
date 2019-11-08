@@ -56,6 +56,7 @@ const StarWarsCard = props => {
               <CardTitle>Mass: {props.mass}</CardTitle>
               <CardTitle>Hair Color: {props.hair_color}</CardTitle>
               <CardTitle>Skin Color: {props.skin_color}</CardTitle>
+              <CardTitle>Eye Color: {props.eye_color}</CardTitle>
               </Fade>
             </CardBody>
           </CardStyle>
